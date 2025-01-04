@@ -314,19 +314,21 @@ color: #0071e3; /* Apple-style blue for emphasis */
     overflow-y: hidden;
   }
   
-  .left-product-container, .right-product-container {
+  .product-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
     height: 100%;
-    min-width: 150px;
-  }
+    /* min-width: 135px; */
+    max-width: 208px;
+    min-width: 208px;
+}
 
   .product-card {
     min-width: 150px;
     background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 1px solid #6C6C6C;
+    border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
@@ -355,4 +357,31 @@ color: #0071e3; /* Apple-style blue for emphasis */
   .product-card .highlight {
     color: green;
     font-weight: bold;
+  }
+  
+  /* Nuevos estilos para el div adicional */
+  .product-card .payment-info {
+    border-top: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    gap: 8px;
+  }
+  
+  .payment-left {
+    flex: 0 0 auto;
+  }
+  
+  .payment-logo {
+    width: 32px;
+    height: 25px;
+  }
+  
+  .payment-right {
+    flex: 1;
+  }
+  
+  .payment-right p {
+    font-size: 0.85rem;
+    margin: 0;
   }
