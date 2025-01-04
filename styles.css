@@ -202,6 +202,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-y: hidden;
 }
 
 
@@ -279,3 +280,79 @@ color: #333;
 font-weight: 600;
 color: #0071e3; /* Apple-style blue for emphasis */
 }
+
+
+
+.best-sellers {
+    height: 1430px;
+    background-color: #fff;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+  
+  .header-best-sellers {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .logo {
+    width: 34px;
+    height: 34px;
+    margin-right: 12px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  .leftleft-product-container, .right-product-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+    min-width: 150px;
+  }
+
+  .product-card {
+    min-width: 150px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .product-card .product-image {
+    background-color: red;
+    height: 150px;
+    width: 100%;
+  }
+  
+  .product-card .details {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .product-card h3 {
+    font-size: 1rem;
+    margin: 0 0 8px;
+  }
+  
+  .product-card p {
+    font-size: 0.9rem;
+    margin: 4px 0;
+  }
+  
+  .product-card .highlight {
+    color: green;
+    font-weight: bold;
+  }
