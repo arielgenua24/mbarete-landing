@@ -314,7 +314,7 @@ color: #0071e3; /* Apple-style blue for emphasis */
     overflow-y: hidden;
   }
   
-  .leftleft-product-container, .right-product-container {
+  .left-product-container, .right-product-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
