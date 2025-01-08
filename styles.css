@@ -98,38 +98,41 @@ body {
 }
 
 .hero {
-    height: 626px;
-    width: 100%;
-    overflow-y: hidden;
-    margin-bottom: 100px;
+  height: 626px;
+  width: 100%;
+  overflow-y: hidden;
+  margin-bottom: 100px;
 }
 
 .hero-image {
-    height: 100%;
-    width: 400px;
-    height: 534px;
+  width: 400px;
+  height: 534px;
 }
 
 .hero-text {
-    display: flex;
-    flex-direction: column;
-    height: 127px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 13px;
+  display: flex;
+  flex-direction: column;
+  height: 127px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
 }
 
 .hero-container {
-    height: 594px;
-    width: 100%;
+  height: 594px;
+  width: 100%;
+  display: flex;           /* Añadido */
+  justify-content: center; /* Añadido */
+  align-items: center;     /* Añadido */
 }
 
 .hero-item {
-    height: 100%;
-    width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* Añadido */
+  width: fit-content;      /* Modificado */
 }
-
 
 .info-title {
     font-size: 20px;
@@ -157,17 +160,34 @@ body {
     object-fit: cover; /* Ajusta la imagen al contenedor, recortando si es necesario */
 }
 
-.span-sale {
-    position: absolute;
-    top: 400px;
-    left: 160px;
-    color: #006CFF;
-    padding: 10px;
-    transform: rotate(352deg);
-    z-index: 100;
-    background-color: none;
-    background: none;
+.div-sale {
+  position: absolute;
+  top: 0;            /* Ajusta según necesites */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;        /* Para asegurar que esté sobre la imagen */
+  width: fit-content;
 }
+
+.span-sale {
+  display: block;
+  /* Tus estilos actuales del span */
+}
+
+/*.span-sale {
+  position: absolute;
+  top: 404px;
+  left: 160px;
+  color: #006CFF;
+  padding: 10px;
+  transform: rotate(352deg);
+  z-index: 100;
+  background-color: none;
+  background: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+*/
 
 .info-item {
     padding: 0px;
@@ -459,4 +479,104 @@ color: #0071e3; /* Apple-style blue for emphasis */
     font-weight: 500;
     white-space: nowrap;
     border: 1px solid;
+}
+
+.client-carousel-section {
+    height: 450px;
+    width: 100%;
+    max-width: 800px;
+    margin: 57px auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+  }
+
+  /* Hide scrollbar for Chrome/Safari/Opera */
+  .client-carousel-section::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-container {
+    height: 100%;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .carousel-slide {
+    height: 100%;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .carousel-wpp-img {
+    object-fit: cover;
+    max-height: 465px;
+    max-width: 80%;
+}
+
+
+
+.faq-section {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.faq-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.faq-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #ebebeb;
+}
+
+.faq-answer {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  padding: 1rem;
+  max-height: 500px;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+  transform: rotate(45deg);
 }

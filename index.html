@@ -52,7 +52,7 @@
                 <span class="span-sale">¡OFERTAS DE VERANO!</span>
             </div>
             <div class="image-container">
-                <img src="./public/MAIN SECTION (1).png" alt="hero-image description" class="hero-image">
+                <img src="./public/Group 17.png" alt="hero-image description" class="hero-image">
               </div>
               <div class="div-btn-catalog">
                 <span class="span-catalog--btn">VER CATALOGO AHORA</span>
@@ -350,7 +350,7 @@
   <div class="promo-container">
     <div class="header-best-sellers">
       <img src="logo.png" alt="Logo" class="logo">
-      <h2 class="title">La tranquilidad que buscas.</h2>
+      <span class="title">La tranquilidad que buscas.</span>
     </div>
 
     <div class="main-box">
@@ -372,15 +372,96 @@
     </div>
   </div>
 
+  <div class="client-carousel-section">
+    <div class="header-best-sellers">
+      <img src="logo.png" alt="Logo" class="logo">
+      <span class="title">Reseña de nuestros clientes.</span>
+    </div>
+
+    <div class="carousel">
+      <div class="carousel-slide">
+        <img class="carousel-wpp-img" src="./public/wpp-3.jpeg" alt="WhatsApp client reaction">
+      </div>
+      <div class="carousel-slide">
+        <img class="carousel-wpp-img" src="./public/wpp-2.jpeg" alt="WhatsApp client reaction">
+      </div>
+      <div class="carousel-slide">
+        <img class="carousel-wpp-img" src="./public/wpp-1.jpeg" alt="WhatsApp client reaction">
+      </div>
+    </div>
+  </div>
+
+
+  <section class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+    <h2 class="faq-title">Preguntas Frecuentes</h2>
+    <div class="faq-container">
+      <!-- FAQ Items generados dinámicamente -->
+    </div>
+  </section>
+
 
   <!-- Contacto -->
   <section class="contacto">
     <h2 class="contacto-titulo">HABLEMOS</h2>
   </section>
 
-  <!-- Más vendidos -->
-  <section class="mas-vendidos">
-    <h2 class="mas-vendidos-titulo">Nuestros más vendidos.</h2>
-  </section>
+
+  <script> 
+     const faqs = [
+      {
+        question: "¿Cuáles son los mejores jeans mayoristas en Avellaneda? ¿Ofrecen descuentos por volumen?",
+        answer: "Descubre en MBARETE JEANS los mejores jeans mayoristas en Avellaneda para que puedas aumentar tus ganancias y no tus costos. Con los precios mas accesibles de Argentina. Gran variedad de estilos."
+      },
+      {
+        question: "¿Poseen venta de jeans por mayor en once? ",
+        answer: "Hacemos envios a todo el pais, tambien nos encontramos en Flores. Visítanos en Galería ADELITA, Local 15."
+      },
+      {
+        question: "¿Qué marcas tienen en baggy jeans? ¿Los mom jeans están disponibles en todas las tallas?",
+        answer: "Baggy jeans para hombre en variedad de marcas y colores. Tambien hay mom jeans para hombre en todas las tallas con envíos rápidos y variedad de estilos."
+      },
+      {
+        question: "¿Qué métodos de pago aceptan?",
+        answer: "Aceptamos diversos métodos de pago y ofrecemos promociones exclusivas para compras mayoristas, asegurando la mejor calidad en todos nuestros productos."
+      },
+      {
+        question: "¿Hay políticas de devolución?",
+        answer: "Sí, contamos con políticas de devolución claras, reembolso del 100% o te volvemos a reenviar los productos."
+      }
+      ,
+      {
+        question: "¿Como hacen para mantener el margen de precios tan bajo?",
+        answer: "Somos la unica empresa del pais que no te cobra ningun IVA, absorbemos el impacto."
+      }
+    ];
+
+    const faqContainer = document.querySelector('.faq-container');
+
+    faqs.forEach((faq, index) => {
+      const faqItem = document.createElement('div');
+      faqItem.className = 'faq-item';
+      faqItem.setAttribute('itemscope', '');
+      faqItem.setAttribute('itemprop', 'mainEntity');
+      faqItem.setAttribute('itemtype', 'https://schema.org/Question');
+      
+      faqItem.innerHTML = `
+        <div class="faq-question" itemprop="name">${faq.question}</div>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">${faq.answer}</div>
+        </div>
+      `;
+
+      faqContainer.appendChild(faqItem);
+    });
+
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        faqItem.classList.toggle('active');
+      });
+    });
+
+
+  </script>
 </body>
 </html>
