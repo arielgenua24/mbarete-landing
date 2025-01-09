@@ -54,19 +54,17 @@
             <div class="image-container">
                 <img src="./public/Group 17.png" alt="hero-image description" class="hero-image">
               </div>
-              <div class="div-btn-catalog">
-                <span class="span-catalog--btn">VER CATALOGO AHORA</span>
-              </div>
         </div>
       
     </div>
+    <div class="div-btn-catalog" onclick="enviarMensaje()">
+      <span class="span-catalog--btn">HABLA CON NOSOTROS</span>
+    </div>
+
   </section>
 
   <!-- Información Adicional -->
   <section class="info-container">
-    <div class="info-header">
-        <span class="info-header-text">SPAN: TEXTO</span>
-    </div>
     
     <div class="info-content">
         <div class="info-item">
@@ -91,6 +89,10 @@
             </h3>
         </div>
     </div>
+    <div class="div-btn-catalog" onclick="enviarMensaje()">
+      <span class="span-catalog--btn">HABLA CON NOSOTROS YA</span>
+    </div>
+
   </section>
 
   <section class="info-container">
@@ -132,6 +134,11 @@
         </table>
       </div>
     </div>
+
+    <div class="div-btn-catalog" onclick="enviarMensaje()">
+      <span class="span-catalog--btn">HABLA CON NOSOTROS YA</span>
+    </div>
+
   </section>
 
   <section class="best-sellers">
@@ -345,6 +352,9 @@
 
       <!-- Más tarjetas de producto -->
     </div>
+    <div class="div-btn-catalog" onclick="enviarMensaje()">
+      <span class="span-catalog--btn">HABLA CON NOSOTROS YA</span>
+    </div>
   </section>
 
   <div class="promo-container">
@@ -370,6 +380,9 @@
     <div class="bottom-banner">
       <p>Por eso somos top ventas de Argentina.</p>
     </div>
+  </div>
+  <div class="div-btn-clck-banner" onclick="enviarMensaje()">
+    <span class="span-catalog--btn">HABLA CON NOSOTROS</span>
   </div>
 
   <div class="client-carousel-section">
@@ -460,6 +473,14 @@
         faqItem.classList.toggle('active');
       });
     });
+
+
+    function enviarMensaje() {
+      var numero = "1137839767";
+      var mensaje = "Hola MBARETE JEANS. he visitado su web y quiero hablar con un asesor";
+      var url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
+    }
 
 
   </script>
