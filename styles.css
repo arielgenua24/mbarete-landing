@@ -428,8 +428,7 @@ color: #0071e3; /* Apple-style blue for emphasis */
   }
   
   .product-card .product-image {
-    background-color: red;
-    height: 150px;
+    height: auto;
     width: 100%;
   }
   
@@ -467,7 +466,7 @@ color: #0071e3; /* Apple-style blue for emphasis */
   }
   
   .payment-logo {
-    width: 32px;
+    width: 82px;
     height: 25px;
   }
   
