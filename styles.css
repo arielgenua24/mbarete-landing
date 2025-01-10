@@ -373,6 +373,11 @@ font-weight: 600;
 color: #0071e3; /* Apple-style blue for emphasis */
 }
 
+@media screen and (max-width: 405px) {
+  .table-container {
+    transform: scale(0.7);/* Esto ayuda a controlar desde dónde se aplica la escala */
+  }
+}
 
 
 .best-sellers {
@@ -650,4 +655,15 @@ color: #0071e3; /* Apple-style blue for emphasis */
 
 .faq-item.active .faq-question::after {
   transform: rotate(45deg);
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
